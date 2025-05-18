@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Quiz Ultimate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <div class="leaderboard">
+        <h3>🏆 Leaderboard</h3>
+        <ul id="leaderboard-list"></ul>
+    </div>
+
+    <div class="quiz-container">
+        <div class="timer-container">
+            <span class="time-text" id="time">30</span>
+            <svg class="timer" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="#eee" stroke-width="4"/>
+                <circle cx="25" cy="25" r="20" fill="none" stroke="var(--primary-color)" 
+                        stroke-width="4" stroke-linecap="round" id="timer-circle"/>
+            </svg>
+        </div>
+        
+        <div class="quiz-header">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+            <div class="score-container">Score: <span id="score">0</span></div>
+            <div class="question-number">Question <span id="current-question">1</span>/<span id="total-questions">5</span></div>
+            <h2 class="question-text" id="question"></h2>
+        </div>
+        
+        <div class="options-container" id="options-container"></div>
+        
+        <div class="controls-container">
+            <button class="next-btn" id="next-btn">Next Question</button>
+        </div>
+
+        <div class="result-container" id="result-container" style="display: none;">
+            <div class="emoji" id="emoji">🎉</div>
+            <h2 class="result-text">Quiz Completed!</h2>
+            <div class="final-score">Your Score: <span id="final-score">0</span></div>
+            <input type="text" class="name-input" id="name-input" placeholder="Enter your name">
+            <button class="next-btn" id="save-btn">Save Score</button>
+            <button class="next-btn" id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <audio id="correct-sound" src="data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU..."></audio>
+    <audio id="wrong-sound" src="data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU..."></audio>
+    <audio id="timeout-sound" src="data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU..."></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
